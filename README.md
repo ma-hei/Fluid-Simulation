@@ -1,4 +1,4 @@
-Demo
+Fluid Simulation
 ====
 -the mathematical background of this fluid simulation are taken from this paper: http://www.cs.ubc.ca/~rbridson/fluidsimulation/fluids_notes.pdf
 
