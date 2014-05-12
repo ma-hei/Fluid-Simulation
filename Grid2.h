@@ -36,15 +36,15 @@ public:
 	void printAllAdvecteduValues();
 	void printPressure();
 
-	float* getVelocityAtVerticalCellFace(int i, int k);
-	float* getVelocityAtHorizontalCellFace(int i, int k);
-	float* getOldPositionOfParticleAtVerticalCellFace(int i, int k);
-	float* getOldPositionOfParticleAtHorizontalCellFace(int i, int k);
-	float* getCellOfPosition();
+	void getVelocityAtVerticalCellFace(int i, int k, float* oldVelocity);
+	void getVelocityAtHorizontalCellFace(int i, int k, float* oldVelocity);
+	void getOldPositionOfParticleAtVerticalCellFace(int i, int k, float* oldPosition);
+	void getOldPositionOfParticleAtHorizontalCellFace(int i, int k, float* oldPosition);
+
 	float* getVelocityAtPosition(float x, float y, int verbose);
-	float* getVelocityAtPosition2(float x, float y);
-	float* getVelocityAtCellPosition(int x, int y, int which);
-	int* getCellOfPosition(float x, float y);
+	void getVelocityAtPosition2(float x, float y, float* velo);
+	void getVelocityAtCellPosition(int x, int y, int which, float* velocity);
+	void getCellOfPosition(float x, float y, int* cell);
 	int getSectorOfPosition(float leftFacex, float lowerFacey, float x, float y);
 	void solvePressure();
 	void updateVelocities();
